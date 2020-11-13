@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
+import PropTypes from "prop-types";
+
 export default class Book extends Component {
   render() {
     const { title, img, Author, price } = this.props.book;
-    console.log(img);
     return (
       <Card style={{ width: "18rem" }}>
         <Card.Img
@@ -23,3 +24,12 @@ export default class Book extends Component {
     );
   }
 }
+Book.propTypes = {
+  book: PropTypes.shape({
+    id:PropTypes.number,
+    title: PropTypes.string,
+    img: PropTypes.string,
+    price: PropTypes.number,
+    Author: PropTypes.string,
+  }).isRequired,
+};
