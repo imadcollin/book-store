@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../images/logo.svg";
+import logo from "../logo.svg";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./AppNav.css";
