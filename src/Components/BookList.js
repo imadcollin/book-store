@@ -1,17 +1,29 @@
 import React, { Component } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+
 import { ProductConsumer } from "../Providers/ProductProvider";
+import Book from "./Book";
 export default class BookList extends Component {
   render() {
     return (
       <div>
-        <h2>Book list </h2>
-        <ProductConsumer>
-          {
-            ((value) =>
-              value.bookList.map((e) => <h1 key={e.title}>{e.title}</h1>))
-          }
-       
-        </ProductConsumer>
+        <h2>Book list </h2>{" "}
+        <Container
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+          }}
+        >
+          <Row>
+            <ProductConsumer>
+              {(books) =>
+                books.bookList.map((book) => <Book key={book.id} book={book} />)
+              }
+            </ProductConsumer>
+          </Row>
+        </Container>
       </div>
     );
   }
