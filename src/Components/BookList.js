@@ -9,14 +9,15 @@ export default class BookList extends Component {
     return (
       <div>
         <h2>Book list </h2>{" "}
-        <Container
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-          }}
-        >
-          <Row>
+        <Container>
+          <Row
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-around",
+            }}
+            className="text-center"
+          >
             <ProductConsumer>
               {(books) =>
                 books.bookList.map((book) => <Book key={book.id} book={book} />)
