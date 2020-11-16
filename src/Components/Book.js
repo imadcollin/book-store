@@ -30,6 +30,7 @@ export default class Book extends Component {
                     Details
                   </Button>
                 </Link>
+                <Button onClick={()=>value.addToCart(id)}>Add to Cart</Button>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">Last updated 3 mins ago</small>

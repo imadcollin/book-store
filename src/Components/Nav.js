@@ -3,6 +3,9 @@ import logo from "../logo.svg";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./AppNav.css";
+import Button from "react-bootstrap/Button";
+import { ProductConsumer } from "../Providers/ProductProvider";
+
 export default class AppNav extends Component {
   render() {
     return (
@@ -21,6 +24,15 @@ export default class AppNav extends Component {
         </Link>{" "}
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
+        </Nav>
+        <Nav className="mr-right">
+          <ProductConsumer>
+            {(items) => (
+              <Link to="/Cart">
+                <Button>My Cart ( {items.carts.length} ) </Button>{" "}
+              </Link>
+            )}
+          </ProductConsumer>
         </Nav>
       </Navbar>
     );
