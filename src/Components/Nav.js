@@ -29,7 +29,10 @@ export default class AppNav extends Component {
           <ProductConsumer>
             {(items) => (
               <Link to="/Cart">
-                <Button>My Cart ( {items.carts.length} ) </Button>{" "}
+                <Button disabled={items.carts.length === 0 ? true : false}>
+                  {" "}
+                  My Cart ( {items.carts.length} ){" "}
+                </Button>{" "}
               </Link>
             )}
           </ProductConsumer>
