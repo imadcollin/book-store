@@ -17,7 +17,7 @@ const bookDetail = [
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },  {
     id: 2,
-    title: "Java",
+    title: "C++",
     Author: "J.K",
     img: "images/5.jpg",
     price: 40,
@@ -25,7 +25,7 @@ const bookDetail = [
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },  {
     id: 3,
-    title: "Java",
+    title: "Pascal",
     Author: "J.K",
     img: "images/6.jpg",
     price: 20,
@@ -33,7 +33,7 @@ const bookDetail = [
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },  {
     id: 4,
-    title: "Java",
+    title: "Perl",
     Author: "J.K",
     img: "images/7.jpg",
     price: 70,
@@ -41,7 +41,7 @@ const bookDetail = [
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },  {
     id: 5,
-    title: "Java",
+    title: "Haskell",
     Author: "J.K",
     img: "images/8.jpg",
     price: 90,
