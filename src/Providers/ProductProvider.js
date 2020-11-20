@@ -7,6 +7,7 @@ export default class ProductProvider extends Component {
     bookList: bookList,
     bookDetail: bookDetail,
     carts: [],
+    totalPrice: 0,
   };
   getBookById = (id) => {
     const book = bookDetail.find((book) => book.id === id);
@@ -21,10 +22,11 @@ export default class ProductProvider extends Component {
   addToCart = (id) => {
     const item = this.getBookById(id);
 
-    const test = this.state.carts.find((item) => item.id === id);
-    if (test === undefined || test === "undefined") {
+    const isExist = this.state.carts.find((item) => item.id === id);
+    if (isExist === undefined || isExist === "undefined") {
       this.setState({
         carts: [...this.state.carts, item],
+        totalPrice: this.state.totalPrice + item.price,
       });
     } else console.log("Already in the Cart");
   };
