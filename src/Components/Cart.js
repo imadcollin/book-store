@@ -6,10 +6,39 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import PayPal from "../Providers/PayPalCheckout";
 export default class Cart extends Component {
+  constructor() {
+    super();
+
+    // this.state = {
+    //   Quantity: 1,
+    //   flag: true,
+    // };
+  }
   render() {
-    this.state = {
-      total: 0,
-    };
+    // this.increment = () => {
+    //   this.setState((state) => {
+    //     return {
+    //       Quantity: (state.Quantity += 1),
+    //     };
+    //   });
+    //   this.checkFlag();
+    // };
+
+    // this.checkFlag = () => {
+    //   this.setState((flagState) => {
+    //     if (this.state.Quantity <= 0) {
+    //       return { flag: (flagState.flag = true) };
+    //     } else return { flag: (flagState.flag = false) };
+    //   });
+    // };
+    // this.decrement = () => {
+    //   this.setState((state) => {
+    //     return {
+    //       Quantity: (state.Quantity -= 1),
+    //     };
+    //   });
+    //   this.checkFlag();
+    // };
 
     this.goBack = () => {
       this.props.history.push("/");
@@ -22,8 +51,9 @@ export default class Cart extends Component {
             <tr>
               <th>No.</th>
               <th> Title</th>
-              <th>Price </th>
               <th>Author</th>
+              <th>Price </th>
+              <th>Quantity </th>
             </tr>
           </thead>
 
@@ -34,8 +64,22 @@ export default class Cart extends Component {
                   <tr key={index}>
                     <td>{index + 1}</td>
                     <td>{item.title}</td>
-                    <td>{item.price}</td>
                     <td>{item.author} </td>
+
+                    <td>{item.price}</td>
+                    <td>
+                      <Button onClick={() => items.increaseQuantity(item.id)}>
+                        +
+                      </Button>{" "}
+                      <Button variant="light"> {item.quantity}</Button>
+                      <Button
+                        variant="secondary"
+                        disabled={item.quantity < 1 ? true : false}
+                        onClick={() => items.decreaseQuantity(item.id)}
+                      >
+                        -
+                      </Button>
+                    </td>
                   </tr>
                 ))
               }

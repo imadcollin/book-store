@@ -13,6 +13,7 @@ const bookDetail = [
     author: "J.K",
     img: "images/1.jpg",
     price: 60,
+    quantity: 1,
     info:
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },
@@ -22,6 +23,7 @@ const bookDetail = [
     author: "J.K",
     img: "images/5.jpg",
     price: 40,
+    quantity: 1,
     info:
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },
@@ -31,6 +33,7 @@ const bookDetail = [
     author: "J.K",
     img: "images/6.jpg",
     price: 20,
+    quantity: 1,
     info:
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },
@@ -40,6 +43,7 @@ const bookDetail = [
     author: "J.K",
     img: "images/7.jpg",
     price: 70,
+    quantity: 1,
     info:
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },
@@ -49,6 +53,7 @@ const bookDetail = [
     author: "J.K",
     img: "images/8.jpg",
     price: 90,
+    quantity: 1,
     info:
       "An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. ",
   },

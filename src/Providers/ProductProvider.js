@@ -28,7 +28,26 @@ export default class ProductProvider extends Component {
         carts: [...this.state.carts, item],
         totalPrice: this.state.totalPrice + item.price,
       });
-    } else console.log("Already in the Cart");
+    } else console.log("the book is already in the cart ");
+  };
+  increaseQuantity = (id) => {
+    const item = this.getBookById(id);
+    item.quantity += 1;
+
+    this.setState((state) => {
+      return { totalPrice: state.totalPrice + item.price };
+    });
+  };
+  decreaseQuantity = (id) => {
+    const item = this.getBookById(id);
+    if (item.quantity < 0) {
+      throw new Error("The quantity can not by less than 0");
+    }
+    item.quantity -= 1;
+
+    this.setState((state) => {
+      return { totalPrice: state.totalPrice - item.price };
+    });
   };
   render() {
     return (
@@ -38,6 +57,8 @@ export default class ProductProvider extends Component {
             ...this.state,
             handleBook: this.handleBook,
             addToCart: this.addToCart,
+            increaseQuantity: this.increaseQuantity,
+            decreaseQuantity: this.decreaseQuantity,
           }}
         >
           {this.props.children}
