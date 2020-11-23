@@ -4,12 +4,13 @@ import Table from "react-bootstrap/Table";
 import "./cart.css";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-
+import PayPal from "../Providers/PayPalCheckout";
 export default class Cart extends Component {
   render() {
     this.state = {
-      count: 0,
+      total: 0,
     };
+
     this.goBack = () => {
       this.props.history.push("/");
     };
@@ -30,7 +31,7 @@ export default class Cart extends Component {
             <ProductConsumer>
               {(items) =>
                 items.carts.map((item, index) => (
-                  <tr>
+                  <tr key={index}>
                     <td>{index + 1}</td>
                     <td>{item.title}</td>
                     <td>{item.price}</td>
@@ -41,6 +42,7 @@ export default class Cart extends Component {
             </ProductConsumer>
           </tbody>
         </Table>
+
         <Button
           renderAs={Link}
           type="button"
@@ -52,9 +54,17 @@ export default class Cart extends Component {
           Back
         </Button>
 
-        <Button size="lg" block>
-          Checkout
-        </Button>
+        <ProductConsumer>
+          {(value) => {
+            return (
+              <div>
+                {" "}
+                <h1> Total Price : {value.totalPrice}</h1>
+                <PayPal total={value.totalPrice}></PayPal>
+              </div>
+            );
+          }}
+        </ProductConsumer>
       </div>
     );
   }
