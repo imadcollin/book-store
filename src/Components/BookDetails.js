@@ -26,7 +26,7 @@ export default class BookDetails extends Component {
                   />
                   <Card.Body>
                     <Card.Title>{bookDetail.title}</Card.Title>
-                    <Card.Text> Written by: {bookDetail.Author}</Card.Text>
+                    <Card.Text> Written by: {bookDetail.author}</Card.Text>
                     <Card.Text>Price: {bookDetail.price} kr</Card.Text>
                     <Card.Text> {bookDetail.info} </Card.Text>
                     <Link to="/">

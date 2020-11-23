@@ -35,7 +35,7 @@ export default class Cart extends Component {
                     <td>{index + 1}</td>
                     <td>{item.title}</td>
                     <td>{item.price}</td>
-                    <td>{item.Author} </td>
+                    <td>{item.author} </td>
                   </tr>
                 ))
               }

@@ -7,7 +7,7 @@ import { ProductConsumer } from "../Providers/ProductProvider";
 
 export default class Book extends Component {
   render() {
-    const { id, title, img, Author, price } = this.props.book;
+    const { id, title, img, author, price } = this.props.book;
     return (
       <div>
         <ProductConsumer>
@@ -20,7 +20,7 @@ export default class Book extends Component {
               />
               <Card.Body>
                 <Card.Title>{title}</Card.Title>
-                <Card.Text> Written by: {Author}</Card.Text>
+                <Card.Text> Written by: {author}</Card.Text>
                 <Card.Text>Price: {price} kr</Card.Text>
                 <Link to="/bookDetails">
                   <Button
@@ -30,7 +30,7 @@ export default class Book extends Component {
                     Details
                   </Button>
                 </Link>
-                <Button onClick={()=>value.addToCart(id)}>Add to Cart</Button>
+                <Button onClick={() => value.addToCart(id)}>Add to Cart</Button>
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">Last updated 3 mins ago</small>
@@ -48,6 +48,6 @@ Book.propTypes = {
     title: PropTypes.string,
     img: PropTypes.string,
     price: PropTypes.number,
-    Author: PropTypes.string,
+    author: PropTypes.string,
   }).isRequired,
 };

@@ -3,11 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import BookList from "./Components/BookList";
-import BookDetails from "./Components/BookDetails"
-import Cart from "./Components/Cart"
+import BookDetails from "./Components/BookDetails";
+import Cart from "./Components/Cart";
 import PageNotFound from "./Components/PageNotFound";
 import Book from "./Components/Book";
-import Nav from "./Components/Nav"
+import Nav from "./Components/Nav";
 function App() {
   return (
     <React.Fragment>
