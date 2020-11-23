@@ -4,6 +4,11 @@ const bookList = [
   { id: 3, title: "Pascal", author: "J.K", img: "images/6.jpg", price: 60 },
   { id: 4, title: "Perl", author: "J.K", img: "images/7.jpg", price: 60 },
   { id: 5, title: "Haskell", author: "J.K", img: "images/8.jpg", price: 60 },
+  { id: 6, title: "Java", author: "J.K", img: "images/1.jpg", price: 40 },
+  { id: 7, title: "C++", author: "J.K", img: "images/5.jpg", price: 60 },
+  { id: 8, title: "Pascal", author: "J.K", img: "images/6.jpg", price: 60 },
+  { id: 9, title: "Perl", author: "J.K", img: "images/7.jpg", price: 60 },
+  { id: 10, title: "Haskell", author: "J.K", img: "images/8.jpg", price: 60 },
 ];
 
 const bookDetail = [
