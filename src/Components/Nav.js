@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./AppNav.css";
 import Button from "react-bootstrap/Button";
 import { ProductConsumer } from "../Providers/ProductProvider";
-
+import User from "./Login/User";
 export default class AppNav extends Component {
   render() {
     return (
@@ -36,6 +36,9 @@ export default class AppNav extends Component {
               </Link>
             )}
           </ProductConsumer>
+        </Nav>
+        <Nav>
+          <User />
         </Nav>
       </Navbar>
     );
