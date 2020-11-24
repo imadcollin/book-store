@@ -8,18 +8,21 @@ const UserOnLogin = () => {
   const { picture } = user;
 
   return (
-    <div>
-      <Link to="/Profile">
-        <div className="">
-          <img
-            src={picture}
-            alt="Profile"
-            width="30%"
-            className="rounded-circle "
-          />
-        </div>
-      </Link>
-    </div>
+    <Link to="/Profile">
+      <div style={{ alignItems: "flex-end", justifyContent: "flex-end" }}>
+        <img
+          style={{
+            alignItems: "flex-end",
+            justifyContent: "flex-end",
+            float: "right",
+          }}
+          src={picture}
+          alt="Profile"
+          width="50%"
+          className="rounded-circle "
+        />
+      </div>
+    </Link>
   );
 };
 

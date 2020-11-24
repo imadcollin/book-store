@@ -6,6 +6,7 @@ import "./AppNav.css";
 import Button from "react-bootstrap/Button";
 import { ProductConsumer } from "../Providers/ProductProvider";
 import User from "./Login/User";
+import AuthButton from "./Login/AuthButton";
 export default class AppNav extends Component {
   render() {
     return (
@@ -38,6 +39,7 @@ export default class AppNav extends Component {
           </ProductConsumer>
         </Nav>
         <Nav>
+          <AuthButton />
           <User />
         </Nav>
       </Navbar>
