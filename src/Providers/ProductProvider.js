@@ -3,12 +3,16 @@ import { bookList, bookDetail } from "./MockData";
 
 const ProductContext = React.createContext();
 export default class ProductProvider extends Component {
-  state = {
-    bookList: bookList,
-    bookDetail: bookDetail,
-    carts: [],
-    totalPrice: 0,
-  };
+  constructor() {
+    super();
+    this.state = {
+      bookList: bookList,
+      bookDetail: bookDetail,
+      carts: [],
+      totalPrice: 0,
+      searchArry: [],
+    };
+  }
   getBookById = (id) => {
     const book = bookDetail.find((book) => book.id === id);
     return book;
@@ -49,6 +53,29 @@ export default class ProductProvider extends Component {
       return { totalPrice: state.totalPrice - item.price };
     });
   };
+  search = (text) => {
+    console.log(text);
+    if (!text) {
+      console.log("Please type something...!");
+    } else {
+      this.setState({ searchArry: [] });
+
+      const item = this.state.bookList.filter((book) => {
+        if (!text) return true;
+        if (book.title.toLowerCase().includes(text)) return true;
+      });
+      this.setState((state) => {
+        return { searchArry: [...state.searchArry, ...item] };
+      });
+    }
+    console.log("size before clear", this.state.searchArry.length);
+  };
+  clearSearch = () => {
+    console.log("clicked");
+    this.setState({ searchArry: [] });
+    console.log("size after clear", this.state.searchArry.length);
+  };
+
   render() {
     return (
       <div>
@@ -59,6 +86,8 @@ export default class ProductProvider extends Component {
             addToCart: this.addToCart,
             increaseQuantity: this.increaseQuantity,
             decreaseQuantity: this.decreaseQuantity,
+            search: this.search,
+            clearSearch: this.clearSearch,
           }}
         >
           {this.props.children}

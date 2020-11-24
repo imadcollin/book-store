@@ -4,11 +4,12 @@ import Row from "react-bootstrap/Row";
 
 import { ProductConsumer } from "../Providers/ProductProvider";
 import Book from "./Book";
+import Search from "./Search";
 export default class BookList extends Component {
   render() {
     return (
       <div>
-        <h2>Book list </h2>{" "}
+        <Search></Search>
         <Container>
           <Row
             style={{
