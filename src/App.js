@@ -8,15 +8,26 @@ import Cart from "./Components/Cart";
 import PageNotFound from "./Components/PageNotFound";
 import Book from "./Components/Book";
 import Nav from "./Components/Nav";
+import { useAuth0 } from "@auth0/auth0-react";
+// import AuthButton from "./Components/Login/AuthButton";
+import Profile from "./Providers/Profile";
+import ProtectedRoute from "./Providers/ProtectRoute";
 function App() {
+  const { isLoading } = useAuth0();
+  if (isLoading) {
+    return <h1>is Loading ....</h1>;
+  }
+
   return (
     <React.Fragment>
       <Nav></Nav>
+      {/* <AuthButton /> */}
       <Switch>
         <Route exact path="/" component={BookList}></Route>
         <Route path="/book" component={Book}></Route>
         <Route path="/bookDetails" component={BookDetails}></Route>
         <Route path="/Cart" component={Cart}></Route>
+        <ProtectedRoute path="/Profile" component={Profile}></ProtectedRoute>
         <Route component={PageNotFound}></Route>
       </Switch>
     </React.Fragment>
