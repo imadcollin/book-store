@@ -33,11 +33,6 @@ export default class DeliveryAddress extends Component {
           </Form.Group>
 
           <Form.Row>
-            {/* <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>City</Form.Label>
-              <Form.Control />
-            </Form.Group> */}
-
             <Form.Group as={Col} controlId="formGridState">
               <Form.Label> State & Region</Form.Label>
               <DeliveryRegions></DeliveryRegions>
