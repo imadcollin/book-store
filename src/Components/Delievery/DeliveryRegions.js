@@ -26,12 +26,12 @@ export default class DeliveryRegions extends Component {
     return (
       <div>
         <CountryDropdown
-          style={{ padding: "6px", border: "1px solid #ced4da" }}
+          style={{ width: "75%", padding: "6px", border: "1px solid #ced4da" }}
           value={country}
           onChange={(val) => this.selectCountry(val)}
         />
         <RegionDropdown
-          style={{ padding: "6px", border: "1px solid #ced4da" }}
+          style={{ width: "25%", padding: "6px", border: "1px solid #ced4da" }}
           country={country}
           value={region}
           onChange={(val) => this.selectRegion(val)}
