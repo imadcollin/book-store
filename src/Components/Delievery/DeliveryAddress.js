@@ -3,21 +3,22 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
-
+import DeliveryRegions from "../Delievery/DeliveryRegions";
 export default class DeliveryAddress extends Component {
   render() {
     return (
       <div>
+        <h1>Delivery Address</h1>
         <Form>
           <Form.Row>
+            <Form.Group as={Col} controlId="formGridName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" placeholder="Enter name" />
+            </Form.Group>
+
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
             </Form.Group>
           </Form.Row>
 
@@ -32,17 +33,14 @@ export default class DeliveryAddress extends Component {
           </Form.Group>
 
           <Form.Row>
-            <Form.Group as={Col} controlId="formGridCity">
+            {/* <Form.Group as={Col} controlId="formGridCity">
               <Form.Label>City</Form.Label>
               <Form.Control />
-            </Form.Group>
+            </Form.Group> */}
 
             <Form.Group as={Col} controlId="formGridState">
-              <Form.Label>State</Form.Label>
-              <Form.Control as="select" defaultValue="Choose...">
-                <option>Choose...</option>
-                <option>...</option>
-              </Form.Control>
+              <Form.Label> State & Region</Form.Label>
+              <DeliveryRegions></DeliveryRegions>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridZip">
@@ -51,15 +49,10 @@ export default class DeliveryAddress extends Component {
             </Form.Group>
           </Form.Row>
 
-          <Form.Group id="formGridCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-          </Form.Group>
-
           <Button variant="primary" type="submit">
             Submit
           </Button>
         </Form>
-        <h1>Shipment View</h1>
       </div>
     );
   }
