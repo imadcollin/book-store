@@ -5,6 +5,7 @@ import "./cart.css";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import PayPal from "../Providers/PayPalCheckout";
+import DeliveryAddress from "./Delievery/DeliveryAddress";
 export default class Cart extends Component {
   constructor() {
     super();
@@ -97,7 +98,9 @@ export default class Cart extends Component {
         >
           Back
         </Button>
-
+        <div className="DeliveryAddress">
+          <DeliveryAddress></DeliveryAddress>
+        </div>
         <ProductConsumer>
           {(value) => {
             return (
