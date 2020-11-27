@@ -1,15 +1,25 @@
 :root {
   --mainWhite: #f3f3f3;
-  --mainDark:#232528;
-
+  --mainDark: #232528;
 }
-body{
-  font-family: 'Oswald', sans-serif !important;
+body {
+  font-family: "Oswald", sans-serif !important;
   background: var(--mainWhite) !important;
-  color: var(--mainDark ) !important;
+  color: var(--mainDark) !important;
 }
-.text-title{
-  font-family: 'Roboto Slab', serif;
+.text-title {
+  font-family: "Roboto Slab", serif;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+}
+.spinner-wrapper {
+  float: left;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

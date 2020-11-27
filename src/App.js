@@ -12,10 +12,15 @@ import { useAuth0 } from "@auth0/auth0-react";
 // import AuthButton from "./Components/Login/AuthButton";
 import Profile from "./Providers/Profile";
 import ProtectedRoute from "./Providers/ProtectRoute";
+import Loader from "./Components/Loader";
 function App() {
   const { isLoading } = useAuth0();
   if (isLoading) {
-    return <h1>is Loading ....</h1>;
+    return (
+      <div className="spinner-wrapper">
+        <Loader></Loader>
+      </div>
+    );
   }
 
   return (
