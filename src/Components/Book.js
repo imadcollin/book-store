@@ -4,12 +4,12 @@ import Button from "react-bootstrap/Button";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../Providers/ProductProvider";
-
+import "../Components/book.css";
 export default class Book extends Component {
   render() {
     const { id, title, img, author, price } = this.props.book;
     return (
-      <div>
+      <div className="book-card">
         <ProductConsumer>
           {(value) => (
             <Card style={{ width: "18rem" }}>
